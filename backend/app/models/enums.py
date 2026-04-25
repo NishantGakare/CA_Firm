@@ -1,0 +1,66 @@
+from enum import StrEnum
+
+
+class UserRole(StrEnum):
+    CA_ADMIN = "CA_ADMIN"
+    STAFF = "STAFF"
+    CLIENT = "CLIENT"
+
+
+class TaskStatus(StrEnum):
+    TODO = "TODO"
+    IN_PROGRESS = "IN_PROGRESS"
+    COMPLETED_BY_STAFF = "COMPLETED_BY_STAFF"
+    PENDING_FROM_STAFF = "PENDING_FROM_STAFF"
+    UNDER_CA_REVIEW = "UNDER_CA_REVIEW"
+    REJECTED_BY_CA = "REJECTED_BY_CA"
+    APPROVED_BY_CA = "APPROVED_BY_CA"
+    INVOICED = "INVOICED"
+    PAYMENT_PENDING = "PAYMENT_PENDING"
+    PAYMENT_CONFIRMED = "PAYMENT_CONFIRMED"
+    DOCUMENT_RELEASED = "DOCUMENT_RELEASED"
+    CLOSED = "CLOSED"
+
+
+class ApprovalDecision(StrEnum):
+    APPROVED = "APPROVED"
+    REJECTED = "REJECTED"
+
+
+class DocumentKind(StrEnum):
+    CLIENT_INPUT = "CLIENT_INPUT"
+    STAFF_WORKING = "STAFF_WORKING"
+    STAFF_OUTPUT = "STAFF_OUTPUT"
+    FINAL_DELIVERABLE = "FINAL_DELIVERABLE"
+
+
+class DocumentAccessState(StrEnum):
+    LOCKED = "LOCKED"
+    UNLOCKED = "UNLOCKED"
+
+
+class InvoiceStatus(StrEnum):
+    DRAFT = "DRAFT"
+    ISSUED = "ISSUED"
+    PARTIALLY_PAID = "PARTIALLY_PAID"
+    PAID = "PAID"
+    VOID = "VOID"
+    OVERDUE = "OVERDUE"
+
+
+class PaymentStatus(StrEnum):
+    INITIATED = "INITIATED"
+    SUCCEEDED = "SUCCEEDED"
+    FAILED = "FAILED"
+    REFUNDED = "REFUNDED"
+
+
+class NotificationChannel(StrEnum):
+    IN_APP = "IN_APP"
+    EMAIL = "EMAIL"
+
+
+class NotificationStatus(StrEnum):
+    PENDING = "PENDING"
+    SENT = "SENT"
+    FAILED = "FAILED"
